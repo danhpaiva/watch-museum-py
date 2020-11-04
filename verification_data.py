@@ -1,11 +1,6 @@
-import arduino
 import connect_database
-from datetime import datetime
-import os
-import random
 import requests
 import sqlite3
-import time
 
 
 def verificarIndiceBanco():

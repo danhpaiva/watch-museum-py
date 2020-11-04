@@ -1,4 +1,4 @@
-import arduino
+import arduino01
 import connect_database
 import verification_data
 from datetime import datetime
@@ -15,22 +15,20 @@ def alimentarBancoDados():
 
     conn = connect_database.conectarBanco()
 
-    for i in range(10):
+    temperatura01 = arduino01.enviarTemperatura()
+    umidade01 = arduino01.enviarUmidade()
 
-        temperatura = arduino.verificarTemperatura()
-        umidade = arduino.verificarUmidade()
+    # comando original do sqlite3 para pegar a data e hora atual no nosso fuso
+    registro01 = "datetime('now','localtime')"
 
-        # comando original do sqlite3 para pegar a data e hora atual no nosso fuso
-        registro = "datetime('now','localtime')"
+    # Criação do cursor para manipular dados sql
+    cursor = conn.cursor()
 
-        # Criação do cursor para manipular dados sql
-        cursor = conn.cursor()
-
-        # Incrementando o índice para não dar erro no banco de dados
-        indice += 1
-        cursor.execute(
-            f"insert into Sensores (id, temperatura, umidade, registro) values({str(indice)}, {str(temperatura)},{str(umidade)},{str(registro)})")
-        conn.commit()
+    # Incrementando o índice para não dar erro no banco de dados
+    indice += 1
+    cursor.execute(
+        f"insert into Sensores (id, sala, temperatura, umidade, registro) values({str(indice)}, 1, {str(temperatura01)},{str(umidade01)},{str(registro01)})")
+    conn.commit()
 
     cursor.execute('select * from Sensores')
 
@@ -38,6 +36,7 @@ def alimentarBancoDados():
         print(linha)
 
     connect_database.fecharBanco(conn)
+
 
 print('\tBackup Broker Local')
 

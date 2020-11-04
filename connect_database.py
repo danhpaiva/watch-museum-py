@@ -1,10 +1,5 @@
-import arduino
-from datetime import datetime
-import os
-import random
-import requests
 import sqlite3
-import time
+
 
 def conectarBanco():
     # Conectando no banco
