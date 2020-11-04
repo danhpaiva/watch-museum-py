@@ -4,18 +4,17 @@ import requests
 import time
 
 
-def realizarRequisicao(url, temperatura, umidade, registro, sala):
+def realizarRequisicao(field1, field2, field3, field4, field5, field6, field7, url):
 
+    # Verificação do número de registro do broker remoto
     backupThingSpeak = verification_data.verificarQuantidadeBackupThingSpeak()
 
+    # Verificação do número de registro do broker local
     databaseSQLiteLenght = verification_data.verificarIndiceBanco()
 
     conn = connect_database.conectarBanco()
 
     while backupThingSpeak <= databaseSQLiteLenght:
-        valorSala = ''
-        valorTemperatura = ''
-        valorUmidade = ''
         valorRegistro = ''
         cursor = conn.cursor()
 
@@ -23,17 +22,20 @@ def realizarRequisicao(url, temperatura, umidade, registro, sala):
             f'select * from Sensores where id={str(backupThingSpeak)}')
 
         for linha in cursor.fetchall():
-            valorSala = linha[1]
-            valorTemperatura = linha[2]
-            valorUmidade = linha[3]
-            valorRegistro = linha[4]
+            valorTemperatura01 = linha[1]
+            valorUmidade01 = linha[2]
+            valorTemperatura02 = linha[3]
+            valorUmidade02 = linha[4]
+            valorTemperatura03 = linha[5]
+            valorUmidade03 = linha[6]
+            valorRegistro = linha[7]
 
-        r = requests.get(url + sala + str(valorSala) + temperatura + str(valorTemperatura) +
-                         umidade + str(valorUmidade) + registro + str(valorRegistro))
+        r = requests.get(url + field1 + str(valorTemperatura01) + field2 + str(valorUmidade01) + field3 + str(
+            valorTemperatura02) + field4 + str(valorUmidade02) + field5 + str(valorTemperatura03) + field6 + str(valorUmidade03) + field7 + valorRegistro)
 
         if (r.status_code == 200):
             print(
-                f'\nBackup {str(backupThingSpeak)}º\nSala:{valorSala}\nTemperatura: {str(valorTemperatura)}\nUmidade:{str(valorUmidade)}\nRegistro:{str(valorRegistro)}')
+                f'\nBackup {str(backupThingSpeak)}º\nTemperatura01: {str(valorTemperatura01)}\nUmidade:{str(valorUmidade01)}\nRegistro:{valorRegistro}')
         else:
             print(
                 f'\nBackup {str(backupThingSpeak)}º não houve sucesso na requisição.')
@@ -43,12 +45,18 @@ def realizarRequisicao(url, temperatura, umidade, registro, sala):
     connect_database.fecharBanco(conn)
 
 
-url = 'https://api.thingspeak.com/update?api_key=YEVTJPX97JIKYWSA&'
-sala = 'field1='
-temperatura = '&field2='
-umidade = '&field3='
-registro = '&field7='
+url = 'https://api.thingspeak.com/update?api_key=YEVTJPX97JIKYWSA'
+field1 = '&field1='
+field2 = '&field2='
+field3 = '&field3='
+field4 = '&field4='
+field5 = '&field5='
+field6 = '&field6='
+field7 = '&field7='
 
 print("\nInício do processo de backup no ThingSpeak...")
-realizarRequisicao(url, temperatura, umidade, registro, sala)
-print()
+
+while True:
+    realizarRequisicao(field1, field2, field3, field4,
+                       field5, field6, field7, url)
+    time.sleep(60)

@@ -1,5 +1,3 @@
-import arduino
-import sqlite3
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
