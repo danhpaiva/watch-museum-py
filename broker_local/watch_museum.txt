@@ -1,0 +1,11 @@
+CREATE TABLE "Sensores" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"sala"	INTEGER NOT NULL,
+	"temperatura"	INTEGER NOT NULL,
+	"umidade"	INTEGER NOT NULL,
+	"media_temperatura"	INTEGER NOT NULL,
+	"media_umidade"	INTEGER NOT NULL,
+	"relatorio_diario"	TEXT NOT NULL,
+	"registro"	INTEGER NOT NULL,
+	PRIMARY KEY("id")
+);
