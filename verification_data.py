@@ -1,4 +1,5 @@
 import arduino
+import connect_database
 from datetime import datetime
 import os
 import random
@@ -8,13 +9,13 @@ import time
 
 
 def verificarIndiceBanco():
-    conn = conectarBanco()
+    conn = connect_database.conectarBanco()
     cursor = conn.cursor()
     cursor.execute('SELECT COUNT(*) from Sensores')
     indice = 0
     for linha in cursor.fetchall():
         indice = linha[0]
-    fecharBanco(conn)
+    connect_database.fecharBanco(conn)
     return indice
 
 
