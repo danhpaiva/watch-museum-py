@@ -15,8 +15,11 @@ def verificarIndiceBanco():
 
 
 def verificarQuantidadeBackupThingSpeak():
-    url = 'https://api.thingspeak.com/channels/1211372/feeds.json?api_key=8ZPLECEO2HMX8JFV&results=1'
+    url = 'https://api.thingspeak.com/channels/1218298/feeds.json?api_key=XRQD7C1VLCSHF0DD&results=1'
     r = requests.get(url)
     data = r.json()
     channel_lenght = data['channel']['last_entry_id']
+    if channel_lenght == None:
+        channel_lenght = 0
+    channel_lenght += 1
     return channel_lenght

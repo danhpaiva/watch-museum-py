@@ -43,8 +43,6 @@ def alimentarBancoDados():
     conn.commit()
 
 
-
-
     cursor.execute('select * from Sensores')
 
     for linha in cursor.fetchall():
