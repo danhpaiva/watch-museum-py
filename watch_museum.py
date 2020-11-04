@@ -1,3 +1,4 @@
+import time
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
@@ -5,68 +6,78 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
 import requests
 
-url = 'https://api.thingspeak.com/channels/1218298/feeds.json?api_key=XRQD7C1VLCSHF0DD&results=5'
+url = 'https://api.thingspeak.com/channels/1218298/feeds.json?api_key=XRQD7C1VLCSHF0DD&results=1'
 
 
 r = requests.get(url)
 
 
-class MySearch(GridLayout):
+class WatchMuseum(GridLayout):
     def __init__(self, **kwargs):
-        super(MySearch, self).__init__(**kwargs)
+        super(WatchMuseum, self).__init__(**kwargs)
         self.cols = 1
         self.inside = GridLayout()
         self.inside.cols = 2
 
-        self.inside.add_widget(Label(text='Sala', font_size=25))
-        self.sala = TextInput(text='0', font_size=20, multiline=True)
-        self.inside.add_widget(self.sala)
+        self.verificar_umidade = Button(
+            text="Verificar Salas", font_size=50, size_hint=(.2, .5))
+        self.verificar_umidade.bind(on_press=self.pressionar)
+        self.add_widget(self.verificar_umidade)
 
-        self.inside.add_widget(Label(text='Temperatura', font_size=25))
-        self.temperatura = TextInput(text='0', font_size=20, multiline=True)
-        self.inside.add_widget(self.temperatura)
+        self.inside.add_widget(Label(text='Temperatura Sala 01', font_size=25))
+        self.temperatura01 = TextInput(text='0', font_size=20, multiline=True)
+        self.inside.add_widget(self.temperatura01)
 
-        self.inside.add_widget(Label(text='Umidade', font_size=25))
-        self.umidade = TextInput(text='0', font_size=20, multiline=True)
-        self.inside.add_widget(self.umidade)
+        self.inside.add_widget(Label(text='Umidade Sala 01', font_size=25))
+        self.umidade01 = TextInput(text='0', font_size=20, multiline=True)
+        self.inside.add_widget(self.umidade01)
 
-        self.inside.add_widget(Label(text='Relatório Diário', font_size=25))
-        self.relatorio_diario = TextInput(text='0', font_size=20, multiline=True)
-        self.inside.add_widget(self.relatorio_diario)
+        self.inside.add_widget(Label(text='Temperatura Sala 02', font_size=25))
+        self.temperatura02 = TextInput(text='0', font_size=20, multiline=True)
+        self.inside.add_widget(self.temperatura02)
 
-        self.inside.add_widget(Label(text='Média Mensal Temperatura', font_size=25))
-        self.media_mensal_temp = TextInput(text='0', font_size=20, multiline=True)
-        self.inside.add_widget(self.media_mensal_temp)
+        self.inside.add_widget(Label(text='Umidade Sala 02', font_size=25))
+        self.umidade02 = TextInput(
+            text='0', font_size=20, multiline=True)
+        self.inside.add_widget(self.umidade02)
 
-        self.inside.add_widget(Label(text='Média Mensal Umidade', font_size=25))
-        self.media_mensal_umid = TextInput(text='0', font_size=20, multiline=True)
-        self.inside.add_widget(self.media_mensal_umid)
+        self.inside.add_widget(
+            Label(text='Temperatura Sala 03', font_size=25))
+        self.temperatura03 = TextInput(
+            text='0', font_size=20, multiline=True)
+        self.inside.add_widget(self.temperatura03)
 
-        self.inside.add_widget(Label(text='Média Mensal Umidade', font_size=25))
+        self.inside.add_widget(
+            Label(text='Umidade Sala 03', font_size=25))
+        self.umidade03 = TextInput(
+            text='0', font_size=20, multiline=True)
+        self.inside.add_widget(self.umidade03)
+
+        self.inside.add_widget(
+            Label(text='Registro', font_size=25))
         self.registro = TextInput(text='0', font_size=20, multiline=True)
         self.inside.add_widget(self.registro)
 
         self.add_widget(self.inside)
-
-        self.verificar_umidade = Button(text="Verificar Umidade", font_size=50, size_hint=(.2, .5))
-        self.verificar_umidade.bind(on_press=self.pressionar)
-        self.add_widget(self.verificar_umidade)
-        
 
     def pressionar(self, instance):
         # Transformando data em um dicionário
         data = r.json()
         print(data)
         feeds = data['feeds']
-        print(feeds[-1]['field2'])
-        self.temperatura.text = str(feeds[-1]['field1'])
-        #self.umidade.text = str(feeds[-1]['field2'])
-        self.umidade.text = str(arduino.verificarUmidade())
+
+        self.temperatura01.text = str(feeds[-1]['field1'])
+        self.umidade01.text = str(feeds[-1]['field2'])
+        self.temperatura02.text = str(feeds[-1]['field3'])
+        self.umidade02.text = str(feeds[-1]['field4'])
+        self.temperatura03.text = str(feeds[-1]['field5'])
+        self.umidade03.text = str(feeds[-1]['field6'])
+        self.registro.text = str(feeds[-1]['field7'])
 
 
 class SearchThingSpeak(App):
     def build(self):
-        return MySearch()
+        return WatchMuseum()
 
 
 SearchThingSpeak().run()
