@@ -3,7 +3,7 @@ import requests
 
 def getMaximumData(maximumData, feeds, field):
     data = []
-    for i in range(10):
+    for i in range(48):
         data.append(int(feeds[i][field]))
     maximumData = max(data)
     return maximumData
@@ -11,7 +11,7 @@ def getMaximumData(maximumData, feeds, field):
 
 def getMinimumData(minimumData, feeds, field):
     data = []
-    for i in range(10):
+    for i in range(48):
         data.append(int(feeds[i][field]))
     minimumData = min(data)
     return minimumData
@@ -36,7 +36,7 @@ def makeRequest(max_temp_01, max_temp_02, max_temp_03, min_temp_01, min_temp_02,
 
 
 # Requisição no broker remoto WatchMuseum
-url = 'https://api.thingspeak.com/channels/1218298/feeds.json?api_key=XRQD7C1VLCSHF0DD&results=10'
+url = 'https://api.thingspeak.com/channels/1218298/feeds.json?api_key=XRQD7C1VLCSHF0DD&results=48'
 request = requests.get(url)
 
 # Transformando Json em um dicionário

@@ -54,6 +54,6 @@ def alimentarBancoDados():
 
 print('\tBackup Broker Local')
 
-while True:
+for i in range(48):
     alimentarBancoDados()
-    time.sleep(7)
+    time.sleep(2)
