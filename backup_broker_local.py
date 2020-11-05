@@ -46,6 +46,7 @@ def alimentarBancoDados():
     executarInsertDataBase(indice, temperatura01, umidade01, temperatura02,
                            umidade02, temperatura03, umidade03, registro, conn)
 
+    print("\n")
     printData(conn)
 
     connect_database.fecharBanco(conn)
@@ -55,4 +56,4 @@ print('\tBackup Broker Local')
 
 while True:
     alimentarBancoDados()
-    time.sleep(60)
+    time.sleep(7)
