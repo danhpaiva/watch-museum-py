@@ -10,7 +10,9 @@
 <p>
     É feito um backup no broker local (SQLite3) e um no broker remoto (ThingSpeak).
 </p>
-
+<p>
+    Existe uma aplicação mobile que consome os dados de uma API e mostra as informações ao gestor do museu.
+</p>
 ## :toolbox: Ferramentas Utilizadas
 - Python 3.7.9
 - SQLite 3
