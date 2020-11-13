@@ -69,5 +69,6 @@ min_temp_03 = getMinimumData(temp_Min_room_03, feeds, field6)
 while True:
     makeRequest(max_temp_01, max_temp_02, max_temp_03,
                 min_temp_01, min_temp_02, min_temp_03)
+    print('Término do processo.')
     #Backup Diário
     time.sleep(86400)
