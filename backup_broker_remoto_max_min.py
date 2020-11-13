@@ -1,5 +1,5 @@
 import requests
-
+import time
 
 def getMaximumData(maximumData, feeds, field):
     data = []
@@ -19,12 +19,12 @@ def getMinimumData(minimumData, feeds, field):
 
 def makeRequest(max_temp_01, max_temp_02, max_temp_03, min_temp_01, min_temp_02, min_temp_03):
     url = 'https://api.thingspeak.com/update?api_key=PEZAFOAXMFNBB4WX'
-    field1 = '&field1='+ str(max_temp_01)
-    field2 = '&field2='+ str(min_temp_01)
-    field3 = '&field3='+ str(max_temp_02)
-    field4 = '&field4='+ str(min_temp_02)
-    field5 = '&field5='+ str(max_temp_03)
-    field6 = '&field6='+ str(min_temp_03)
+    field1 = '&field1=' + str(max_temp_01)
+    field2 = '&field2=' + str(min_temp_01)
+    field3 = '&field3=' + str(max_temp_02)
+    field4 = '&field4=' + str(min_temp_02)
+    field5 = '&field5=' + str(max_temp_03)
+    field6 = '&field6=' + str(min_temp_03)
     request = requests.get(url+field1+field2+field3+field4+field5+field6)
 
     if (request.status_code == 200):
@@ -66,5 +66,8 @@ min_temp_02 = getMinimumData(temp_Min_room_02, feeds, field4)
 max_temp_03 = getMaximumData(temp_Max_room_03, feeds, field5)
 min_temp_03 = getMinimumData(temp_Min_room_03, feeds, field6)
 
-makeRequest(max_temp_01, max_temp_02, max_temp_03,
-            min_temp_01, min_temp_02, min_temp_03)
+while True:
+    makeRequest(max_temp_01, max_temp_02, max_temp_03,
+                min_temp_01, min_temp_02, min_temp_03)
+    #Backup Diário
+    time.sleep(86400)
