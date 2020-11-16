@@ -2,13 +2,13 @@ import arduino01
 import arduino02
 import arduino03
 import connect_database
-import verification_data
 from datetime import datetime
 import os
 import random
 import requests
 import sqlite3
 import time
+import verification_data
 
 
 def printData(conn):
