@@ -35,7 +35,7 @@ def realizarRequisicao(field1, field2, field3, field4, field5, field6, field7, u
 
         if (r.status_code == 200):
             print(
-                f'\nBackup {str(backupThingSpeak)}º\nTemperatura01: {str(valorTemperatura01)}\nUmidade:{str(valorUmidade01)}\nRegistro:{valorRegistro}')
+                f'\nBackup nº: {str(backupThingSpeak)}\nRegistro: {valorRegistro}\n\tAguardando 20 segundos para a próxima requisição.')
         else:
             print(
                 f'\nBackup {str(backupThingSpeak)}º não houve sucesso na requisição.')
