@@ -51,4 +51,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 Desenvolvido por <a href="https://www.linkedin.com/in/danhpaiva/" target="_blank">Daniel Paiva</a>,
 <a href="https://www.linkedin.com/in/francisco-fontoura/" target="_blank">Francisco Fontoura</a>,
 <a href="https://github.com/gab-gomes" target="_blank">Gabriel Gomes</a>, e 
-<a href="https://www.linkedin.com/in/guilhermepujoni/" target="_blank">Guilherme Pujoni</a>  
+<a href="https://www.linkedin.com/in/guilhermepujoni/" target="_blank">Guilherme Pujoni</a> .
