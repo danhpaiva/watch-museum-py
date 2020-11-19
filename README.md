@@ -25,8 +25,8 @@
 <h2 id=objetivo>:scroll: Objetivo</h2>
 Este projeto tem como objetivo construir um backend para o app mobile utilizando Python, arduino e broker's de dados remoto.<br>
 É feito um sistema que verifica os dados de 03 salas do museu e informa sua umidade e temperatura.<br>
-Ele alerta caso a temperatura ou umidade fique extrema. 
-E possui o histórico da média dos últimos 10 dias.
+Ele alerta caso a umidade fique acima de 70% (regra de negócio).
+E possui o histórico da média da temperatura dos últimos 10 dias.
 
 <h2 id=instalacao>:clipboard: Instalação</h2>
 
