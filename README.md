@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="#">
-    <img src="logo/Watch-Museum.png" width="500" alt="Watch Museum">
+    <img src="https://raw.githubusercontent.com/danhpaiva/watch-museum-react-native/main/logo/Watch-Museum.png" width="500" alt="Watch Museum">
   </a>
 </p>
 <p align="center">
