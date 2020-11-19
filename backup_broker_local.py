@@ -57,4 +57,4 @@ print('\tBackup Broker Local')
 for i in range(48):
     alimentarBancoDados()
     # time.sleep(1800) para registrar de meia em meia hora
-    time.sleep(1)
+    time.sleep(1800)
