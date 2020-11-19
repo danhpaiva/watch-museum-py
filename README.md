@@ -14,8 +14,8 @@
  <a href="#objetivo">Objetivo</a> •
  <a href="#instalacao">Instalação</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#autor">Autor</a> .
- <a href="#licenca">Licença</a> • 
+ <a href="#autor">Autor</a> • 
+ <a href="#licenca">Licença</a> 
 </p>
 
 <h2 align="center" id=status> 
@@ -43,6 +43,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Python 3.7.9 - <a href="https://www.python.org/downloads/release/python-379/"> Download </a>
 - SQLite 3 - <a href="https://www.sqlite.org/download.html"> Download </a>
 - React Native - <a href="https://reactnative.dev/"> Download </a>
+
+<h2 id=autor>:grin: Autores</h2>
 
 Desenvolvido por <a href="https://www.linkedin.com/in/danhpaiva/" target="_blank">Daniel Paiva</a>,
 <a href="https://www.linkedin.com/in/francisco-fontoura/" target="_blank">Francisco Fontoura</a>,
