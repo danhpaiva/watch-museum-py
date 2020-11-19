@@ -40,8 +40,10 @@ Clone o repositório. Instale o APK.
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
+- IDE: <a href="https://code.visualstudio.com/">Visual Studio Code</a>
 - Python 3.7.9 - <a href="https://www.python.org/downloads/release/python-379/"> Download </a>
-- SQLite 3 - <a href="https://www.sqlite.org/download.html"> Download </a>
+- Banco de Dados Remoto: <a href="https://thingspeak.com/">ThingSpeak</a>
+- Banco de Dados Local: <a href="https://www.sqlite.org/download.html">SQLite 3</a>
 - React Native - <a href="https://reactnative.dev/"> Download </a>
 
 <h2 id=autor>:grin: Autores</h2>
