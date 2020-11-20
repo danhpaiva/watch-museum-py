@@ -37,7 +37,7 @@ O sistema também registra a média da temperatura diariamente.
 * Execute o arquivo chamado:
 > backup_broker_local.py
 
-Ele registrará o backup local de meia em meia hora.<br>
+Ele registrará os dados de backup local de meia em meia hora.<br>
 * Agora execute o arquivo chamado:
 > backup_broker_remoto.py
 
