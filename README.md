@@ -25,9 +25,10 @@
 <h2 id=objetivo>:scroll: Objetivo</h2>
 
 Este projeto tem como objetivo construir o backend da aplicação mobile utilizando Python.<br>
-Os códigos "arduino.py" simulam os registros de arduinos.<br>
-O arquivo "backup_broker_local.py" salva esses dados no broker local feito em SQLlite.<br>
+Os códigos <strong>"arduino.py"</strong> simulam os registros de umidade e temperatura que um arduino físico pode registrar.<br>
+O arquivo <strong>"backup_broker_local.py"</strong> salva esses dados no broker local feito em SQLlite.<br>
 E os outros arquivos de backup mandam esses dados para o broker remoto (ThingSpeak). <br>
+
 Essa lógica salva os dados de 03 salas do museu na nuvem e localmente.<br>
 Caso o sistema fique sem internet, não há problemas pois após salvar os registros localmente, o sistema de vericação irá atuar para assim que a Internet se reestabeleça<br>
 Verifique os dados que deverão subir para o broker remoto.<br>
