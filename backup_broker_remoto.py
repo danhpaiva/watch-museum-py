@@ -59,5 +59,5 @@ print("\nInício do processo de backup no ThingSpeak...")
 while True:
     realizarRequisicao(field1, field2, field3, field4,
                        field5, field6, field7, url)
-    # time.sleep(1800) para registrar de meia em meia hora
-    time.sleep(20)
+    # time.sleep(60) para buscar os dados a cada minuto
+    time.sleep(60)
