@@ -6,7 +6,7 @@
   </a>
 </p>
 <p align="center">
-    BackEnd do aplicativo mobile para gerenciamento de Museu's
+    BackEnd da aplicação mobile para gerenciamento de Museu's
 </p>
 
 <p align="center">
