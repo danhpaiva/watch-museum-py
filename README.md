@@ -51,7 +51,7 @@ A cada minuto ele vai checar os dados localmente para mandar para a nuvem.
 Para que o sistema realize o backup da média diária.
 
 Para o frontend da aplicação veja este repositório: 
-[Watch Museum - React Native](https://github.com/danhpaiva/watch-museum-react-native)<br>
+[Watch Museum - React Native](https://github.com/danhpaiva/watch-museum-react-native) .
 
 <h2 id=tecnologias>:toolbox: Tecnologias</h2>
 
