@@ -38,17 +38,21 @@ O sistema também registra a média da temperatura diariamente.
 1. Faça o clone do repositório.
 2. Execute o arquivo chamado:
 > backup_broker_local.py
+
 Ele registrará o backup local de meia em meia hora.<br>
 3. Agora execute o arquivo chamado:
 > backup_broker_remoto.py
 
 A cada minuto ele vai checar os dados localmente para mandar para a nuvem.
 
-4. Escolha um horário para que o sistema execute o arquivo diariamente.
+4. Escolha o horário e execute o arquivo:
+> backup_broker_remotoMaxMin.py
+
+para que o sistema realize o backup da média diária.
+
 5. Para o frontend da aplicação veja este repositório:<br>
 [Watch Museum - React Native](https://github.com/danhpaiva/watch-museum-react-native)<br>
-6. Clone o repositório.<br>
-7. Instale o APK.
+6. Clone o repositório e instale o APK da aplicação.<br>
 
 <h2 id=tecnologias>:toolbox: Tecnologias</h2>
 
