@@ -28,8 +28,7 @@ O arquivo <strong>"backup_broker_local.py"</strong> salva esses dados no broker 
 E os outros arquivos de backup mandam esses dados para o broker remoto (ThingSpeak). <br>
 
 Essa lógica salva os dados de 03 salas do museu na nuvem e localmente.<br>
-Caso o sistema fique sem internet, não há problemas pois após salvar os registros localmente, o sistema de vericação irá atuar para assim que a Internet se reestabeleça<br>
-Verifique os dados que deverão subir para o broker remoto.<br>
+Caso o sistema fique sem internet, pois existe um sistema de verificação irá atuar para assim que a Internet se reestabeleça verifique os dados que deverão subir para o broker remoto.<br>
 O sistema também registra a média da temperatura diariamente.
 
 <h2 id=instalacao>:clipboard: Instalação</h2>
