@@ -1,29 +1,46 @@
 <h1 align="center">Watch Museum - App Mobile</h1>
 
+## Descrição
+<p>
+    Esse gerenciador de museu's foi escrito em python com o conceito de Sistemas Distribuídos.
 <p align="center">
   <a href="#">
-    <img src="https://raw.githubusercontent.com/danhpaiva/watch-museum-react-native/main/logo/Watch-Museum.png" width="500" alt="Watch Museum">
+    <img src="logo/Watch-Museum.png" width="500" alt="Watch Museum">
   </a>
 </p>
+<p>
+    O objetivo do programa é simular 03 arduínos que medem de 30 em 30 minutos a temperatura e a umidade de determinada sala do museu.
 <p align="center">
     Backend do Aplicativo mobile para gerenciamento de Museu's
 </p>
+<p>
+    É feito um backup no broker local (SQLite3) e um no broker remoto (ThingSpeak).
+</p>
+<p>
+    Existe uma aplicação mobile que consome os dados de uma API e mostra as informações ao gestor do museu.
 
 <p align="center">
  <a href="#status">Status</a> • 
  <a href="#objetivo">Objetivo</a> •
  <a href="#instalacao">Instalação</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#autor">Autor</a> • 
- <a href="#licenca">Licença</a> 
+ <a href="#autor">Autor</a> .
+ <a href="#licenca">Licença</a> • 
 </p>
 
+## :toolbox: Ferramentas Utilizadas
+- Python 3.7.9
+- SQLite 3
+- React Native
 <h2 align="center" id=status> 
 	:beginner: Concluído :beginner:
 </h2>
 
 <h2 id=objetivo>:scroll: Objetivo</h2>
-XXX
+Este projeto tem como objetivo construir um backend para o app mobile utilizando Python, arduino e broker's de dados remoto.<br>
+É feito um sistema que verifica os dados de 03 salas do museu e informa sua umidade e temperatura.<br>
+Ele alerta caso a temperatura ou umidade fique extrema. 
+E possui o histórico da média dos últimos 10 dias.
 
 <h2 id=instalacao>:clipboard: Instalação</h2>
 
@@ -37,13 +54,13 @@ Clone o repositório. Instale o APK.
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- IDE: <a href="https://code.visualstudio.com/">Visual Studio Code</a>
-- Banco de Dados Local: <a href="https://www.sqlite.org/download.html">SQLite 3</a>
-- Flutter: <a href="https://flutter.dev/docs/get-started/install">Flutter v1.22.4</a>
+- Python 3.7.9 - <a href="https://www.python.org/downloads/release/python-379/"> Download </a>
+- SQLite 3 - <a href="https://www.sqlite.org/download.html"> Download </a>
+- React Native - <a href="https://reactnative.dev/"> Download </a>
 
-<h2 id=autor>:grin: Autores</h2>
-
+## :lock: Licença
+Desenvolvido por <a href="https://www.linkedin.com/in/danhpaiva/">Daniel Paiva</a>
 Desenvolvido por <a href="https://www.linkedin.com/in/danhpaiva/" target="_blank">Daniel Paiva</a>,
 <a href="https://www.linkedin.com/in/francisco-fontoura/" target="_blank">Francisco Fontoura</a>,
-<a href="https://github.com/gab-gomes" target="_blank">Gabriel Gomes</a>, e 
-<a href="https://www.linkedin.com/in/guilhermepujoni/" target="_blank">Guilherme Pujoni</a> .
+<a href="https://github.com/gab-gomes" target="_blank">Gabriel Gomes</a>,
+<a href="https://www.linkedin.com/in/guilhermepujoni/" target="_blank">Guilherme Pujoni</a>  
