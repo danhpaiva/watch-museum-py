@@ -40,10 +40,11 @@ O sistema também registra a média da temperatura diariamente.
 > backup_broker_local.py
 
 Ele registrará o backup local de meia em meia hora.
-3. Ao mesmo tempo execute o arquivo chamado:
->
 
-Ele fará o backup remoto de meia em meia hora.
+3. Agora execute o arquivo chamado:
+> backup_broker_remoto.py
+
+A cada minuto ele vai checar os dados localmente para mandar para a nuvem.
 
 4. Escolha um horário para que o sistema execute o arquivo diariamente.
 5. Para o frontend da aplicação veja este repositório:<br>
