@@ -23,10 +23,7 @@
 </h2>
 
 <h2 id=objetivo>:scroll: Objetivo</h2>
-Este projeto tem como objetivo construir um backend para o app mobile utilizando Python, arduino e broker's de dados remoto.<br>
-É feito um sistema que verifica os dados de 03 salas do museu e informa sua umidade e temperatura.<br>
-Ele alerta caso a umidade fique acima de 70% (regra de negócio).
-E possui o histórico da média da temperatura dos últimos 10 dias.
+XXX
 
 <h2 id=instalacao>:clipboard: Instalação</h2>
 
@@ -41,10 +38,8 @@ Clone o repositório. Instale o APK.
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - IDE: <a href="https://code.visualstudio.com/">Visual Studio Code</a>
-- Python 3.7.9 - <a href="https://www.python.org/downloads/release/python-379/"> Download </a>
-- Banco de Dados Remoto: <a href="https://thingspeak.com/">ThingSpeak</a>
 - Banco de Dados Local: <a href="https://www.sqlite.org/download.html">SQLite 3</a>
-- React Native - <a href="https://reactnative.dev/"> Download </a>
+- Flutter: <a href="https://flutter.dev/docs/get-started/install">Flutter v1.22.4</a>
 
 <h2 id=autor>:grin: Autores</h2>
 
