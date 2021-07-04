@@ -69,4 +69,4 @@ Developed by <a href="https://www.linkedin.com/in/danhpaiva/" target="_blank">Da
 <a href="https://www.linkedin.com/in/guilhermepujoni/" target="_blank">Guilherme Pujoni</a> .
 
 <h2 id=licenca>:lock: Licence</h2>
-<a href="https://github.com/danhpaiva/login-csharp-sqlServer/blob/master/LICENSE" target="_blank">MIT</a>
+<a href="https://github.com/danhpaiva/watch-museum-py/blob/main/LICENSE" target="_blank">MIT</a>
