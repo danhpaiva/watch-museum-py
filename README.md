@@ -4,69 +4,69 @@
   </a>
 </p>
 <p align="center">
-    BackEnd da aplicação mobile para gerenciamento de Museu's
+    BackEnd of the mobile application for museum management
 </p>
 
 <p align="center">
  <a href="#status">Status</a> • 
- <a href="#objetivo">Objetivo</a> •
- <a href="#instalacao">Instalação</a> • 
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#autor">Autor</a> • 
- <a href="#licenca">Licença</a> 
+ <a href="#objetivo">Objective</a> •
+ <a href="#instalacao">Installation</a> • 
+ <a href="#tecnologias">Technologies</a> • 
+ <a href="#autor">Author</a> • 
+ <a href="#licenca">Licence</a> 
 </p>
 
 <h2 align="center" id=status> 
-	:beginner: Concluído :beginner:
+	⌛ Concluded ⌛
 </h2>
 
-<h2 id=objetivo>:scroll: Objetivo</h2>
+<h2 id=objetivo>:scroll: Objective</h2>
 
-Este projeto tem como objetivo construir o backend da aplicação mobile utilizando Python.<br>
-Os códigos <strong>"arduino.py"</strong> simulam os registros de umidade e temperatura que um arduino físico pode registrar.<br>
-O arquivo <strong>"backup_broker_local.py"</strong> salva esses dados no broker local feito em SQLlite.<br>
-E os outros arquivos de backup mandam esses dados para o broker remoto (ThingSpeak). <br>
+This project aims to build the backend of the mobile application, using the language: Python.<br>
+The codes <strong>"arduino.py"</strong> simulate the humidity and temperature records that a physical Arduino can record.<br>
+The file <strong>"backup_broker_local.py"</strong> saves the data to the local broker made in SQLite.<br>
+And the other backup files send this data to the remote broker (ThingSpeak).<br>
 
-Essa lógica salva os dados de 03 salas do museu na nuvem e localmente.<br>
-Caso o sistema fique sem internet, pois existe um sistema de verificação irá atuar para assim que a Internet se reestabeleça verifique os dados que deverão subir para o broker remoto.<br>
-O sistema também registra a média da temperatura diariamente.
+This logic saves data from 03 museum rooms in the cloud and locally.<br>
+If the system is without internet, as there is a verification system, it will act so that as soon as the Internet is re-established, verify the data that should go up to the remote broker.<br>
+The system also records the average temperature on a daily basis.
 
-<h2 id=instalacao>:clipboard: Instalação</h2>
+<h2 id=instalacao>:clipboard: Installation</h2>
 
-* Faça o clone do repositório.
-* Execute o arquivo chamado:
+* Clone the repository.
+* Run the file named:
 > backup_broker_local.py
 
-Ele registrará os dados de backup local de meia em meia hora.<br>
-* Agora execute o arquivo chamado:
+It records local backup data in half an hour interval.<br>
+* Now run the file called:
 > backup_broker_remoto.py
 
-A cada minuto ele vai checar os dados localmente para mandar para a nuvem.
+Every minute it will check the data locally to send it to the cloud.
 
-* Escolha o horário e execute o arquivo:
+* Choose the time and run the file:
 > backup_broker_remotoMaxMin.py
 
-Para que o sistema realize o backup da média diária.
+For the system to back up the daily average.
 
-Para o frontend da aplicação veja este repositório: 
+For the frontend of the application see this repository:
 [Watch Museum - React Native](https://github.com/danhpaiva/watch-museum-react-native) .
 
-<h2 id=tecnologias>:toolbox: Tecnologias</h2>
+<h2 id=tecnologias>:toolbox: Technologies</h2>
 
-As seguintes ferramentas foram usadas na construção do projeto:
+The following tools were used in the construction of the project:
 
 - IDE: <a href="https://code.visualstudio.com/">Visual Studio Code</a>
 - Python 3.7.9 - <a href="https://www.python.org/downloads/release/python-379/"> Download </a>
-- Banco de Dados Remoto: <a href="https://thingspeak.com/">ThingSpeak</a>
-- Banco de Dados Local: <a href="https://www.sqlite.org/download.html">SQLite 3</a>
+- Remote Database: <a href="https://thingspeak.com/">ThingSpeak</a>
+- Local Database: <a href="https://www.sqlite.org/download.html">SQLite 3</a>
 - React Native - <a href="https://reactnative.dev/"> Download </a>
 
-<h2 id=autor>:grin: Autores</h2>
+<h2 id=autor>:grin: Author</h2>
 
-Desenvolvido por <a href="https://www.linkedin.com/in/danhpaiva/" target="_blank">Daniel Paiva</a>,
+Developed by <a href="https://www.linkedin.com/in/danhpaiva/" target="_blank">Daniel Paiva</a>,
 <a href="https://www.linkedin.com/in/francisco-fontoura/" target="_blank">Francisco Fontoura</a>,
-<a href="https://github.com/gab-gomes" target="_blank">Gabriel Gomes</a> e 
+<a href="https://github.com/gab-gomes" target="_blank">Gabriel Gomes</a> and 
 <a href="https://www.linkedin.com/in/guilhermepujoni/" target="_blank">Guilherme Pujoni</a> .
 
-<h2 id=licenca>:lock: Licença</h2>
+<h2 id=licenca>:lock: Licence</h2>
 <a href="https://github.com/danhpaiva/login-csharp-sqlServer/blob/master/LICENSE" target="_blank">MIT</a>
